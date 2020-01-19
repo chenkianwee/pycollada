@@ -1,0 +1,28 @@
+package:
+  name: pycollada
+  version: "0.7"
+
+source:
+  path: ../
+  #git_rev: 0.70
+  #git_url: https://github.com/chenkianwee/pycollada
+
+requirements:
+  build:
+    - pip
+    - numpy
+    - python
+    - python-dateutil >=2.2
+
+  run:
+    - python
+    - numpy
+    - python-dateutil >=2.2
+    
+test:
+  imports:
+    - collada
+
+about:
+  home: https://github.com/chenkianwee/pycollada
+  license: BSD
