@@ -1,6 +1,14 @@
 pycollada Changelog
 ###################
 
+0.7.1 (2020-01-23)
+==================
+
+Bug Fixes
+=========
+* Fix package_data in 0.7 release.
+
+
 0.7 (2019-10-10)
 ****************
 
@@ -172,7 +180,7 @@ Bug Fixes
 Releasing
 #########
 
-#. Generate log:
+#. Generate log::
 
        git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:"* %s"
 
@@ -184,13 +192,14 @@ Releasing
 
 #. Commit changes.
 
-#. Tag version:
+#. Tag version::
 
        git tag v0.x HEAD
+       git push origin master
        git push --tags
 
 
-#. Build source distribution:
+#. Build source distribution::
 
        python setup.py sdist
        twine upload dist/pycollada-0.7.tar.gz -u user -p "pass"
